@@ -23,7 +23,10 @@ function SerieDetailScreen({route}) {
     />
     </View>
   );
+
 }
+
+
 
 
 export default SerieDetailScreen;

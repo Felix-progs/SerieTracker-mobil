@@ -19,26 +19,49 @@ function SerieListScreen({navigation}) {
   }, []);
 
   return (
-    <View>
-      <Text>SerieListScreen</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('SerieDetail',{series})}>
-        <Text>Go to Detail</Text>
+    <View style={styles.container}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('SerieDetail', { series })}
+      >
+        <Text style={styles.buttonText}>Gå till detaljer</Text>
       </TouchableOpacity>
       <FlatList
       data={series}
       keyExtractor={(item) => item.id.toString()}
-      renderItem={({item}) => 
-      <View>
-      <Text>{item.title}</Text>
+      renderItem={({item}) => (
+       <View style={styles.serieItem}>
+      <Text style={styles.serieText}>{item.title}</Text>
       </View>
-    }
+  )}
     />
     </View>
   );
 }
 
-
-
-
+const styles = StyleSheet.create({
+    container: {flex: 1, padding: 16, backgroundColor: '#fff'},
+    header: {fontSize: 22, fontWeight: 'bold', marginBottom: 12},
+    serieItem: {
+    padding: 12,
+    margin: 8,
+    backgroundColor: '#064874',
+    borderRadius: 8,
+    },
+    serieText:{
+    fontSize: 16,
+    color: '#fff'
+    },
+    button: { 
+      padding: 8, 
+      backgroundColor: '#064874', 
+      borderRadius: 8, 
+      alignSelf: 'center', 
+      marginBottom: 15 
+    },
+    
+    buttonText: { color: '#fff' },
+  });
+  
 
 export default SerieListScreen;
