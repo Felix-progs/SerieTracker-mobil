@@ -21,7 +21,7 @@ function SerieListScreen({navigation}) {
   return (
     <View>
       <Text>SerieListScreen</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('SerieDetail')}>
+      <TouchableOpacity onPress={() => navigation.navigate('SerieDetail',{series})}>
         <Text>Go to Detail</Text>
       </TouchableOpacity>
       <FlatList
@@ -30,7 +30,6 @@ function SerieListScreen({navigation}) {
       renderItem={({item}) => 
       <View>
       <Text>{item.title}</Text>
-      <Text>Säsong {item.season}, avsnitt {item.episode}</Text>
       </View>
     }
     />
