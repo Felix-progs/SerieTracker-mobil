@@ -41,7 +41,6 @@ function SerieListScreen({navigation}) {
 
 const styles = StyleSheet.create({
     container: {flex: 1, padding: 16, backgroundColor: '#fff'},
-    header: {fontSize: 22, fontWeight: 'bold', marginBottom: 12},
     serieItem: {
     padding: 12,
     margin: 8,
@@ -52,14 +51,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#fff'
     },
-    button: { 
-      padding: 8, 
-      backgroundColor: '#064874', 
-      borderRadius: 8, 
-      alignSelf: 'center', 
-      marginBottom: 15 
-    },
-    
+    button: { padding: 8, backgroundColor: '#064874', borderRadius: 8, alignSelf: 'center', marginBottom: 15 },
     buttonText: { color: '#fff' },
   });
   
